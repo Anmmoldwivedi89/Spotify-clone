@@ -231,3 +231,6 @@ bottom: 6px;
 left:0%;
 transition: left 0.5s;
 }
+.songbutton img{
+cursor: pointer;
+}

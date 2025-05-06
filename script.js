@@ -1,4 +1,9 @@
 
+
+let currentSong = new Audio();
+
+
+
 async function getSongs() {
     
 
@@ -23,14 +28,16 @@ return songs;
 let audio = new Audio();
 const playMusic = (track)=> {
     let audio = new Audio("/songs/" + track)
-    audio.play()
+    currentSong.src = "/songs/" + track
+    currentSong.play()
 }
 
 // Get the  list of all the songs
 async function main() {
     
-let currentSong;
 
+
+// Get the list of all the songs
 
     let songs = await getSongs()
     console.log(songs)
@@ -58,6 +65,20 @@ Array.from(document.querySelector(".songList").getElementsByTagName("li")).forEa
 console.log(e.querySelector(".info").firstElementChild.innerHTML)
 playMusic(e.querySelector(".info").firstElementChild.innerHTML.trim())
 })
+})
+
+//Attach an event listener to play , next and previous
+play.addEventListener("click", ()=> {
+    if(currentSong.paused){
+        currentSong.play()
+        play.src = "pause.svg"
+        play.src = "pause.svg"
+    }
+    else{
+        currentSong.pause()
+        play.src = "play.svg"
+
+    }
 })
 
 }
