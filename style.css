@@ -1,0 +1,233 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    font-family: "Roboto Serif", serif;
+   
+
+}
+body{
+    background-color: black;
+}
+
+
+.left{
+    width: 25vw;
+    
+}
+.right{
+    width:75vw;
+    height: 46vw;
+    position:relative;
+    
+}
+.logo{
+     width:3vw;
+    
+}
+.invert{
+    filter: invert(1)
+}
+.bg-grey{
+    background-color:#121212;
+    background-position: 100%;
+}
+.home{
+    padding:10px;
+}
+.home ul li{
+    display:flex;
+    gap: 15px;
+    width: 14px;
+    list-style: none;
+    padding-top: 14px;
+    font-weight: bold;
+}
+.heading{
+    display:flex;
+    gap: 1px;
+    width: 100%;
+    font-weight: bold; 
+    margin:auto;
+font-size:20px;
+}
+/* 
+ * Style.heading svg{
+    width:30px;
+}s for SVG elements within elements that have the class 'heading'.
+ * This rule sets the width of the SVG to 30 pixels.
+ */
+.heading svg {
+    width: 30px;
+}
+.search{
+   width:90%;
+}
+.library{
+    min-height: 100%;
+    position: relative;
+}
+
+
+.button{
+    display: flex;
+    justify-content: top;
+    
+}
+
+.header{ 
+    display: flex;
+    justify-content: space-between;
+    background-color: #343434;
+}
+.header > *{
+    padding: 20px;
+}
+.spotify-playlists{
+    padding: 16px;
+}
+ .cardContainer{
+    padding-top: 13px;
+    margin:10px;
+    display: flex;
+    gap:10px;
+flex-wrap: wrap;
+max-height:80vh;
+overflow-y: scroll;
+
+ }
+ .card{
+
+    width: 200px;
+
+    padding:10px;
+    border-radius: 5px;
+    background-color: #252525;
+    position:relative;
+}
+.card > *{
+    padding-top: 10px;
+}
+ .card img{
+width: 100%;
+ object-fit: contain;
+ }
+ .play{
+    position: absolute;
+    right:15px;
+  top:200px;
+  opacity: 0;
+  transition: all 1s ease-out;
+ }
+ .card > .play:hover{
+    opacity:1;
+    top:168px
+ }
+ .button > * {
+    margin: 0 12px;
+ }
+ .signbtn{
+    background-color: #343434;
+    font-weight: bold;
+    color:rgb(230, 180, 180);
+    border:none;
+ }
+ .signbtn:hover{
+    font-size:17px;
+    color:white;
+ }
+ .loginbtn{
+
+    background-color: white;
+    border-radius: 21px;
+    width:80px;
+    padding:10px;
+ }
+.loginbtn:hover{
+    font-weight:bold;
+    width:81px;
+    cursor: pointer;
+
+} 
+
+.playbar{
+    position: fixed;
+    bottom:10px;
+    background-color: rgb(32 46 32);
+    border-radius: 10px;
+    width: 90%;
+    padding: 12px;
+    width: 70vw;
+    height: 40px;
+    
+}
+.songsbuttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* space between buttons */
+    align-items: center;
+}
+
+.songsbuttons img {
+    
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    
+}
+.songList{
+    height:400px;
+    overflow:auto;
+    margin:44px 0;
+}
+.songList ul{
+padding: 0 12px
+}
+
+.songList ul li{
+    list-style-type: decimal;
+    display:flex;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+padding: 12px 0;
+border: 1px solid white;
+margin: 12px 0;
+padding: 13px 0;
+border-radius: 5px;
+}
+.songList .info{
+    font-size:13px;
+    width: 344px;
+}
+.playnow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.playnow span{
+    font-size: 10px;
+    width: 80px;
+    
+}
+.seekbar{
+    height: 2px;
+    width: 95%;
+    background:white;
+    border-radius:10px;
+    position:absolute;
+    bottom:0;
+    margin: 6px;
+}
+.circle{
+    width: 13px;
+    height: 13px;
+    border-radius: 13px;
+    background-color: white;
+    position: relative;
+bottom: 6px;
+left:0%;
+transition: left 0.5s;
+}
