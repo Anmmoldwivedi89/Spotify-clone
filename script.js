@@ -26,10 +26,15 @@ for(let index = 0; index< as.length; index++){
 return songs;
 }
 let audio = new Audio();
-const playMusic = (track)=> {
-    let audio = new Audio("/songs/" + track)
+const playMusic = (track, pause= false)=> {
     currentSong.src = "/songs/" + track
+    if(!pause){
     currentSong.play()
+    play.src = "pause.svg"
+}
+    
+    document.querySelector(".songinfo").innerHTML =decodeURI(track)
+    document.querySelector(".songtime").innerHTML = "00:00/ 00:00"
 }
 
 // Get the  list of all the songs
@@ -40,7 +45,7 @@ async function main() {
 // Get the list of all the songs
 
     let songs = await getSongs()
-    console.log(songs)
+    playMusic(songs[0], true)
     
     //Show all the songs in the playlist
 
@@ -72,7 +77,7 @@ play.addEventListener("click", ()=> {
     if(currentSong.paused){
         currentSong.play()
         play.src = "pause.svg"
-        play.src = "pause.svg"
+        
     }
     else{
         currentSong.pause()
@@ -81,6 +86,28 @@ play.addEventListener("click", ()=> {
     }
 })
 
+//listen for timeupdate event
+// ✅ Define the function first
+function secondsToMinutesSeconds(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${minutes}:${secs.toString().padStart(2, '0')}`;
+}
+
+// Then your event listener
+currentSong.addEventListener("timeupdate", () => {
+    console.log(currentSong.currentTime, currentSong.duration);
+    document.querySelector(".songtime").innerHTML =
+        `${secondsToMinutesSeconds(currentSong.currentTime)} / ${secondsToMinutesSeconds(currentSong.duration)}`;
+        document.querySelector(".circle").style.left = (currentSong.currentTime/ currentSong.duration) * 100 +"%"
+});
+
+//Add an event listener to seekbar
+document.querySelector(".seekbar").addEventListener("click",e =>{
+    let precent = (e.offsetX/e.target.getBoundingClientRect().width) * 100;
+    document.querySelector(".circle").style.left = (e.offsetX/e.target.getBoundingClientRect().width) *100 + "%";
+    currentSong.currentTime = (currentSong.duration * precent) /100
+})
 }
 
 

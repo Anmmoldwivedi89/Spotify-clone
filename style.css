@@ -23,9 +23,17 @@ body{
     position:relative;
     
 }
-.logo{
+.logo{ 
+    display:flex;
      width:3vw;
+     justify-content: space-between;
+     padding: 10px 0;
     
+}
+.logo > span{
+    padding:10px 0;
+    font-weight: 500;
+    font-size: 28px;
 }
 .invert{
     filter: invert(1)
@@ -180,7 +188,7 @@ width: 100%;
 .songList{
     height:400px;
     overflow:auto;
-    margin:44px 0;
+    margin:20px 0;
 }
 .songList ul{
 padding: 0 12px
@@ -213,13 +221,14 @@ border-radius: 5px;
     
 }
 .seekbar{
-    height: 2px;
+    height: 4px;
     width: 95%;
     background:white;
     border-radius:10px;
     position:absolute;
     bottom:0;
     margin: 6px;
+    cursor: pointer;
 }
 .circle{
     width: 13px;
@@ -233,4 +242,12 @@ transition: left 0.5s;
 }
 .songbutton img{
 cursor: pointer;
+}
+.songinfo, .songtime{
+    color:white;
+    padding: 0 12px;
+}
+.abovebar{
+    display:flex;
+    justify-content: space-between;
 }

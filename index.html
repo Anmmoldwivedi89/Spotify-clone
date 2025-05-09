@@ -1,5 +1,6 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,149 +8,141 @@
     <link rel="stylesheet" href="utility.css">
     <title>Spotify -Web Player: Music for everyone</title>
 </head>
+
 <body>
     <div class="container flex bg-black">
-    <div class="left">
-    <div class="home bg-grey rounded m-1 p-1">
-        <div class="logo"><img src="logo.svg" alt="" class="invert"></div>
-        <ul>
-            <li><img class="invert" src="home.svg" alt="home">Home</li>
-            <li><img class="invert" src="search.svg" alt="seacrh">Search</li>
-        </ul>
-    </div>
-    
-    <div class="library bg-grey rounded m-1 p-1">
-        <button  class="heading invert Button-sc-1dqy6lx-0 iGxOjp encore-text-body-medium-bold i_FRcsaqNCEJmoyObIP0 cljOO1tpzixzXctKJucK NxEINIJHGytq4gF1r2N1 or84FBarW2zQhXfB9VFb odS2IW9wfNVHhkhc0l_X O0AN8Ty_Cxd4iLwyKATB wQnUXn1m6Gy4PH8jhslb D8wJ9TPfJzLeLJYxnad2 oE8LAmRhbeQqsZrQo4lb zWWLnqWslTLHwq3wBgGB XNjgtSbyhshr7YQcVvry mhuhir0ikRqXAPHU8ZZ1" aria-label="Collapse Your Library" data-encore-id="buttonTertiary"><span aria-hidden="true" class="IconWrapper__Wrapper-sc-16usrgb-0 jEDcnm"><svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"></path></svg></span>Your Library</button>
-            <div role=" search">
-            <input class="search"
-                role="searchbox" 
-                maxlength="80" 
-                autocorrect="off" 
-                autocapitalize="off" 
-                spellcheck="false" 
-                placeholder="Search in Your Library" 
-                aria-hidden="true" 
-                value="" 
-                tabindex="-1"
-            >
-          
-            <button 
-                data-testid="expand-button" 
-                aria-hidden="false" 
-                aria-label="Search in Your Library"
-            >
-                <svg role="img" aria-hidden="true" viewBox="15 0 1 16">
-                    <path d="M7 1.75a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5zM.25 7a6.75 6.75 0 1 1 12.096 4.12l3.184 3.185a.75.75 0 1 1-1.06 1.06L11.304 12.2A6.75 6.75 0 0 1 .25 7z"></path>
-                </svg>
-            </button>
-
-        </div>
-       
-</span>
-            </button>
-        </span>
-
-<div class="songList">
-    <ul>
-      
-    </ul>
-</div>
-
-
-
-
-       <!-- library div ends  -->
-    </div>
-    
-</div>
-    <div class="right">
-        <div class="header">
-            <div class="nav">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff       " fill="none">
-                    <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff" fill="none">
-                    <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                   </div>
-            <div class="button">
-                <button class="signbtn">Sign up</button>
-                <button class="loginbtn">Log in</button>
+        <div class="left">
+            <div class="home bg-grey rounded m-1 p-1">
+                <div class="logo"><img src="logo.svg" alt="" class="invert"><span>Spotify</span></div>
+                <ul>
+                    <li><img class="invert" src="home.svg" alt="home">Home</li>
+                    <li><img class="invert" src="search.svg" alt="seacrh">Search</li>
+                </ul>
             </div>
-        </div>
-        <div class="spotify-playlists">
-            <h1>Spotify Playlists</h1>
-            <div class="cardContainer">
-                <div class="card">
-                    <div class="play">
-                        <svg xmlns="http://www.w3.org/2000/svg" 
-                        viewBox="0 0 24 24" 
-                        width="64" 
-                        height="64" 
-                        fill="green" 
-                        stroke="green">
-                        
-                       <!-- Filled green circle -->
-                       <circle cx="12" cy="12" r="10" stroke="green" stroke-width="1.5" fill="green" />
-               
-                       <!-- White play triangle -->
-                       <path d="M9.5 11.1998V12.8002C9.5 14.3195 9.5 15.0791 9.95576 15.3862C10.4115 15.6932 11.0348 15.3535 12.2815 14.6741L13.7497 13.8738C15.2499 13.0562 16 12.6474 16 12C16 11.3526 15.2499 10.9438 13.7497 10.1262L12.2815 9.32594C11.0348 8.6465 10.4115 8.30678 9.95576 8.61382C9.5 8.92086 9.5 9.6805 9.5 11.1998Z" fill="white" />
-                   </svg>
-                    </div>
-                    
-                    <img src="https://newjams-images.scdn.co/image/ab676477000033ad/dt/v3/discover-weekly/BVgs2KxAlnoUP8N1QJizmg==/QkctbmVCRy1uZUJHLW5lQg==" alt="">
-                    <h2>Happy Hits</h2>
-                    <p>Hits to boost your mood and fill you with happiness!</p>
-                </div>
-                <div class="card">
-                    <div class="play">
-                        <svg xmlns="http://www.w3.org/2000/svg" 
-                        viewBox="0 0 24 24" 
-                        width="64" 
-                        height="64" 
-                        fill="green" 
-                        stroke="green">
-                        
-                       <!-- Filled green circle -->
-                       <circle cx="12" cy="12" r="10" stroke="green" stroke-width="1.5" fill="green" />
-               
-                       <!-- White play triangle -->
-                       <path d="M9.5 11.1998V12.8002C9.5 14.3195 9.5 15.0791 9.95576 15.3862C10.4115 15.6932 11.0348 15.3535 12.2815 14.6741L13.7497 13.8738C15.2499 13.0562 16 12.6474 16 12C16 11.3526 15.2499 10.9438 13.7497 10.1262L12.2815 9.32594C11.0348 8.6465 10.4115 8.30678 9.95576 8.61382C9.5 8.92086 9.5 9.6805 9.5 11.1998Z" fill="white" />
-                   </svg>
-                    </div>
-                    
-                    <img src="https://newjams-images.scdn.co/image/ab676477000033ad/dt/v3/discover-weekly/BVgs2KxAlnoUP8N1QJizmg==/QkctbmVCRy1uZUJHLW5lQg==" alt="">
-                    <h2>Happy Hits</h2>
-                    <p>Hits to boost your mood and fill you with happiness!</p>
-                </div>
-               
-              </div>
-              <div class="playbar">
-                <div class="seekbar">
-                    <div class="circle">
-                        
-                    </div>
-                </div>
-                <div class="songinfo"></div>
-                <div class="songsbuttons">
-                  <img id="previous" src="prevsong.svg" alt="Previous" />
-                  <img id="play" src="pause.svg" alt="Play" />
-                  <img id="next" src="nextsong.svg" alt="Next" />
-                </div>
-                <div class="songtime">
 
-                </div>
-              </div>
-              
-              </div>
+            <div class="library bg-grey rounded m-1 p-1">
+                <button
+                    class="heading invert Button-sc-1dqy6lx-0 iGxOjp encore-text-body-medium-bold i_FRcsaqNCEJmoyObIP0 cljOO1tpzixzXctKJucK NxEINIJHGytq4gF1r2N1 or84FBarW2zQhXfB9VFb odS2IW9wfNVHhkhc0l_X O0AN8Ty_Cxd4iLwyKATB wQnUXn1m6Gy4PH8jhslb D8wJ9TPfJzLeLJYxnad2 oE8LAmRhbeQqsZrQo4lb zWWLnqWslTLHwq3wBgGB XNjgtSbyhshr7YQcVvry mhuhir0ikRqXAPHU8ZZ1"
+                    aria-label="Collapse Your Library" data-encore-id="buttonTertiary"><span aria-hidden="true"
+                        class="IconWrapper__Wrapper-sc-16usrgb-0 jEDcnm"><svg data-encore-id="icon" role="img"
+                            aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE">
+                            <path
+                                d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z">
+                            </path>
+                        </svg></span>Your Library</button>
                
+
+            
+                </button>
                 
+
+                <div class="songList">
+                    <ul>
+
+                    </ul>
+                </div>
+
+
+
+
+                <!-- library div ends  -->
             </div>
+
+        </div>
+        <div class="right">
+            <div class="header">
+                <div class="nav">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                        color="#ffffff       " fill="none">
+                        <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff"
+                        fill="none">
+                        <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="button">
+                    <button class="signbtn">Sign up</button>
+                    <button class="loginbtn">Log in</button>
+                </div>
+            </div>
+            <div class="spotify-playlists">
+                <h1>Spotify Playlists</h1>
+                <div class="cardContainer">
+                    <div class="card">
+                        <div class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64"
+                                fill="green" stroke="green">
+
+                                <!-- Filled green circle -->
+                                <circle cx="12" cy="12" r="10" stroke="green" stroke-width="1.5" fill="green" />
+
+                                <!-- White play triangle -->
+                                <path
+                                    d="M9.5 11.1998V12.8002C9.5 14.3195 9.5 15.0791 9.95576 15.3862C10.4115 15.6932 11.0348 15.3535 12.2815 14.6741L13.7497 13.8738C15.2499 13.0562 16 12.6474 16 12C16 11.3526 15.2499 10.9438 13.7497 10.1262L12.2815 9.32594C11.0348 8.6465 10.4115 8.30678 9.95576 8.61382C9.5 8.92086 9.5 9.6805 9.5 11.1998Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+
+                        <img src="https://newjams-images.scdn.co/image/ab676477000033ad/dt/v3/discover-weekly/BVgs2KxAlnoUP8N1QJizmg==/QkctbmVCRy1uZUJHLW5lQg=="
+                            alt="">
+                        <h2>Happy Hits</h2>
+                        <p>Hits to boost your mood and fill you with happiness!</p>
+                    </div>
+                    <div class="card">
+                        <div class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64"
+                                fill="green" stroke="green">
+
+                                <!-- Filled green circle -->
+                                <circle cx="12" cy="12" r="10" stroke="green" stroke-width="1.5" fill="green" />
+
+                                <!-- White play triangle -->
+                                <path
+                                    d="M9.5 11.1998V12.8002C9.5 14.3195 9.5 15.0791 9.95576 15.3862C10.4115 15.6932 11.0348 15.3535 12.2815 14.6741L13.7497 13.8738C15.2499 13.0562 16 12.6474 16 12C16 11.3526 15.2499 10.9438 13.7497 10.1262L12.2815 9.32594C11.0348 8.6465 10.4115 8.30678 9.95576 8.61382C9.5 8.92086 9.5 9.6805 9.5 11.1998Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+
+                        <img src="https://newjams-images.scdn.co/image/ab676477000033ad/dt/v3/discover-weekly/BVgs2KxAlnoUP8N1QJizmg==/QkctbmVCRy1uZUJHLW5lQg=="
+                            alt="">
+                        <h2>Happy Hits</h2>
+                        <p>Hits to boost your mood and fill you with happiness!</p>
+                    </div>
+
+                </div>
+                <div class="playbar">
+                    <div class="seekbar">
+                        <div class="circle">
+
+                        </div>
+                    </div>
+                    <div class="abovebar">
+
+
+                        <div class="songinfo"></div>
+                        <div class="songsbuttons">
+                            <img id="previous" src="prevsong.svg" alt="Previous" />
+                            <img id="play" src="play.svg" alt="pause" />
+                            <img id="next" src="nextsong.svg" alt="Next" />
+                        </div>
+                        <div class="songtime">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
         </div>
     </div>
-</div>
+    </div>
+    </div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
