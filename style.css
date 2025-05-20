@@ -191,6 +191,12 @@ width: 100%;
     overflow:auto;
     margin:20px 0;
 }
+
+.hamburger{
+    display:none;
+    height: 60px;
+    width: 60px;
+}
 .songList ul{
 padding: 0 12px
 }
@@ -252,6 +258,7 @@ cursor: pointer;
     display:flex;
     justify-content: space-between;
 }
+@media (max-width: 300px){
     .left{
         background-color: red;
         position: absolute;
@@ -265,5 +272,8 @@ cursor: pointer;
     }
     .playbar{
        width: 95vw; 
+    }
+    .hamburger{
+        display: block;
     }
 }
